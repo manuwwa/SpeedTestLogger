@@ -35,4 +35,4 @@ mycursor.execute(sql, val)
 
 mydb.commit()
 
-print(mycursor.rowcount, "record inserted.")
+print(mycursor.rowcount, "record inserted. Download:", download," Upload:", upload, "Ping:", ping)
