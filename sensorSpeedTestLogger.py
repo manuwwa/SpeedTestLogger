@@ -29,7 +29,7 @@ ping = s.results.ping
 
 mycursor = mydb.cursor()
 
-sql = "INSERT INTO " +table+ " (ping, upload, download, connectionTimeOut) VALUES (%s, %s, %s)"
+sql = "INSERT INTO " +table+ " (ping, upload, download, connectionTimeOut) VALUES (%s, %s, %s, %s)"
 val = (ping, upload, download,False)
 mycursor.execute(sql, val)
 
