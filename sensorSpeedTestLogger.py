@@ -33,4 +33,6 @@ sql = "INSERT INTO " +table+ " (ping, upload, download, connectionTimeOut) VALUE
 val = (ping, upload, download,False)
 mycursor.execute(sql, val)
 
+mydb.commit()
 
+print(mycursor.rowcount, "record inserted.")
