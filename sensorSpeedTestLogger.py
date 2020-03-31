@@ -1,13 +1,12 @@
 import speedtest
 import json
 import mysql.connector
-
+servers = []
 threads = None
 with open('config.JSON') as config_file:
     config = json.load(config_file)
 data = {}
 s = speedtest.Speedtest()
-
 #Read config
 database = config['database']
 table = config['table']
@@ -21,10 +20,13 @@ mydb = mysql.connector.connect(
   passwd=password,
   database=database
 )
-
+s.get_servers(servers)
+s.get_best_server()
+s.download(threads=threads)
+s.upload(threads=threads)
 #Read data
-download = s.results.download
-upload = s.results.upload
+download = int(s.results.download/1000000)
+upload = int(s.results.upload/1000000)
 ping = s.results.ping
 
 mycursor = mydb.cursor()

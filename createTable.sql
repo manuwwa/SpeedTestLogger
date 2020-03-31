@@ -1,6 +1,6 @@
 CREATE TABLE grafana.SpeedTestLog (
 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-ping INT NOT NULL,
+ping DECIMAL(4,3) NOT NULL,
 download INT  NOT NULL,
 upload INT  NOT NULL,
 connectionTimeOut BOOLEAN NOT NULL,
