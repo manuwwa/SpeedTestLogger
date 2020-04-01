@@ -1,2 +1,2 @@
 # sensorSepeedTestLogger
-sensor speed test logger for sensorlogger using speedtest-cli
+Speed test logger using speedtest-cli
